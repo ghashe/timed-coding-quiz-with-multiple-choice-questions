@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="main-header">
       <!------------ quiz start button container ------------>
       <div class="quiz-start-btn">
         <button>Start The Quiz</button>
@@ -40,28 +40,90 @@
         </div>
       </div>
     </header>
-
-    <main class="page-content">
+    <!-- Quiz container -->
+    <main class="quiz-page-content">
       <section class="question-list-wrapper">
-        <h2 class="question-list-title">CSS Questions</h2>
+        <header class="question-list-wrapper">
+          <div class="quiz-title" id="quiz-title">
+            <h2>Interactive Timed Quiz Application</h2>
+          </div>
+          <div class="count-down-timer" id="count-down-timer">
+            <div class="remaining-time-text" id="remaining-time-text">
+              Time remaining
+            </div>
+            <div class="remaining-time" id="remaining-time">20</div>
+          </div>
+        </header>
+
         <ul class="question-list">
-          <li class="question-item">Questions will be here</li>
+          <li class="question-item">
+            <div class="question">
+              <p>1. What does CSS stand for?</p>
+            </div>
+            <div class="choice-lists">
+              <div class="choice">
+                <p>A. Colorful Style Sheets</p>
+
+                <div class="wrong-answer">
+                  <p>Wrong!</p>
+                </div>
+              </div>
+
+              <div class="choice">
+                <p>B. Cascading Style Sheets</p>
+
+                <div class="correct-answer">
+                  <p>Correct!</p>
+                </div>
+              </div>
+
+              <div class="choice">
+                <p>C. Creative Style Sheets</p>
+              </div>
+
+              <div class="choice">
+                <p>D. Computer Style Sheets</p>
+              </div>
+            </div>
+          </li>
+
+          <!--The question container footer  -->
+          <footer>
+            <div class="question-number-of-total">
+              <span>
+                <p>Question</p>
+                &nbsp
+                <p>1</p>
+                &nbsp
+                <p>of</p>
+                &nbsp
+                <p>5</p>
+              </span>
+            </div>
+            <button class="next">Next</button>
+          </footer>
         </ul>
       </section>
     </main>
 
-    <footer>
-      <p>
-        If you don't know about CSS, please read
-        <a
-          href="https://www.w3schools.com/css/default.asp"
-          target="_blank"
-          rel="noopener noreferrer"
-          >CSS Tutorial
-        </a>
-        from scratch.
-      </p>
-      &copy;2022 by CSS Quiz
+    <!-- Quiz score starts -->
+    <footer class="score">
+      <div class="quiz-complite-message">
+        Congratulations, you have successfully completed the quiz!
+      </div>
+
+      <div class="score-message">
+        <span>
+          <p>and you scored</p>
+          &nbsp
+          <p>25%</p></span
+        >
+      </div>
+
+      <div class="buttons">
+        <button class="retake">Retake Quiz</button>
+        <button class="exit">Exit Quiz</button>
+      </div>
     </footer>
     <script src="/assets/js/script.js"></script>
   </body>
