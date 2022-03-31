@@ -66,17 +66,22 @@ header {
   width: 100px;
   border-radius: 50%;
   font-size: 2em;
-  border: 1px solid rgb(7, 82, 7);
-  background: green;
+  border: 2px solid rgb(107, 114, 107);
+  background: rgb(43, 116, 226);
   color: white;
   transition: transform 0.5s ease-out;
+  cursor: pointer;
 }
 
 .quiz-start-btn button:hover {
-  color: rgb(0, 194, 32);
-  font-weight: 600;
-  transition: transform 0.2s ease-out;
-  background: #ffffffbd;
+  color: rgb(255, 255, 255);
+  transition: 0.4s;
+  transform: scale(1.2);
+}
+
+.quiz-start-btn button:hover {
+  color: rgb(255, 255, 255);
+  background: green;
   transform: scale(1.2);
 }
 
