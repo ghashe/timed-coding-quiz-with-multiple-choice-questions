@@ -39,6 +39,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+<<<<<<< HEAD
 
 .quiz-info-container.activeInfo {
   z-index: 5;
@@ -46,6 +47,8 @@ header {
   pointer-events: auto;
   transform: translate(-50%, -50%) scale((1));
 }
+=======
+>>>>>>> feature/add-questions
 /* apply styling to quiz star button */
 
 .quiz-start-btn {
