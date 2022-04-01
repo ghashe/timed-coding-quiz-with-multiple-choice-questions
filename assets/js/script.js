@@ -20,4 +20,29 @@ exit_btn.onclick = function () {
 continue_btn.onclick = function () {
   quiz_info_container.classList.remove("activeInfo");
   quiz_container.classList.add("activeQuiz");
+  fetchQuestions(2);
 };
+
+// Adding a method to get an array that returns questions and answers
+var numberOfQuestion = 0;
+
+function fetchQuestions(index) {
+  const questionClassName = document.querySelector(".question");
+  const optionsClassName = document.querySelector(".choice_lists");
+  let questionItself = "<p>" + questions[index].question + "</p>";
+  let optionLists =
+    '<div class="choice">' +
+    questions[index].options[0] +
+    "<p></p></div>" +
+    '<div class="choice">' +
+    questions[index].options[1] +
+    "<p></p></div>" +
+    '<div class="choice">' +
+    questions[index].options[2] +
+    "<p></p></div>" +
+    '<div class="choice">' +
+    questions[index].options[3] +
+    "<p></p></div>";
+  questionClassName.innerHTML = questionItself;
+  optionsClassName.innerHTML = optionLists;
+}

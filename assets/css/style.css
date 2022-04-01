@@ -55,12 +55,13 @@ header {
 /* apply styling to quiz star button */
 
 .quiz_start_btn {
-  width: 400px;
-  height: 200px;
+  width: 320px;
+  height: 180px;
   background: rgb(206, 213, 219);
   display: inline-block;
   text-align: center;
   border-radius: 5px;
+
 }
 
 .quiz_start_btn h2 {
@@ -178,17 +179,10 @@ footer {
   font-size: 4.5rem;
 }
 
-.quiz-page-content {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 25px auto;
-  width: 95%;
-}
+
 
 .question_list_wrapper {
-  margin-top: 10%;
+  margin-top: 170px;
   width: auto;
   flex: 1;
   opacity: 0;
@@ -196,12 +190,12 @@ footer {
   transform: translate(-50%, -50%) scale(0.9)
 }
 
-.question-list-title {
+.question-_ist-title {
   color: var(--secondary);
   font-size: 1.5em;
 }
 
-.question-list {
+.question-_ist {
   list-style: none;
   padding: 15px;
   height: calc(100% - 50px);
@@ -210,13 +204,14 @@ footer {
   border: 2px solid var(--grey);
 }
 
-.question-item {
+.question_item {
   color: var(--grey);
   padding: 15px 15px;
   border: 2px solid var(--grey);
   background: var(--tertiary);
   border-radius: 12px;
   margin-bottom: 10px;
+  padding: 0 30px 20px 30px;
 }
 
 .question-type {
@@ -224,12 +219,22 @@ footer {
   font-size: 1.55rem;
 }
 
-.quiz-page-content {
-  background-color: #ffffff;
+.quiz_page_content {
+  background: #ffffff;
   border-radius: 20px;
   margin-bottom: 100px;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px auto;
+    width: 95%;
 }
 
+.question_list_wrapper  {
+background: white;
+
+}
 .question_list_wrapper header {
   height: 70px;
   padding: 0 30px;
@@ -279,20 +284,17 @@ footer {
   user-select: none;
 }
 
-.question-item {
-  padding: 0 30px 20px 30px;
-}
 
 .question {
   font-size: 4em;
 }
 
-.choice-lists {
+.choice_lists {
   padding-left: 25px;
   display: block;
 }
 
-.choice-lists .choice {
+.choice_lists .choice {
   background: #6e6a6a48;
   border: 1px solid #3183a3;
   margin: 5px;
@@ -308,7 +310,7 @@ footer {
   text-transform: capitalize;
   transition: transform 0.5s ease-out;
 }
-.choice-lists .choice:hover {
+.choice_lists .choice:hover {
   font-weight: 600;
   transition: transform 0.2s ease-out;
   background: #6e6e6ebd;
