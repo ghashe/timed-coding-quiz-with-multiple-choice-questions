@@ -1,13 +1,23 @@
-// get required the elements that enable us to switch and interface the pages
+// get required elements that enable us to switch and interface the pages
 
-const quizStartBtn = document.querySelector(".quiz-start-btn button");
-const quizInfoContainer = document.querySelector(".quiz-info-container");
-const exitBtn =
-  quiz - info - container.document.querySelector(".buttons #exit");
-const continueBtn =
-  quiz - info - container.document.querySelector(".buttons #continue");
+var start_btn = document.querySelector(".quiz_start_btn button");
+var quiz_info_container = document.querySelector(".quiz_info_container");
+var exit_btn = quiz_info_container.querySelector(".buttons .exit");
+var continue_btn = quiz_info_container.querySelector(".buttons .btn");
+var quiz_container = document.querySelector(".question_list_wrapper");
 
-// Add functionality to the start button when it is clicked
-quizStartBtn.onclick = function () {
-  quiz - info - container.add("activeInfo");
+// When the start button is clicked, we are taken to the quiz's rules page
+start_btn.onclick = function () {
+  quiz_info_container.classList.add("activeInfo");
+};
+
+// When the exit button is clicked, we are taken back to the start page
+exit_btn.onclick = function () {
+  quiz_info_container.classList.remove("activeInfo");
+};
+
+// If the continue button is clicked, we are taken forward to the actual quiz page
+continue_btn.onclick = function () {
+  quiz_info_container.classList.remove("activeInfo");
+  quiz_container.classList.add("activeQuiz");
 };
