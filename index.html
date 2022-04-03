@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Quiz</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="main-header">
+      <!------------ quiz start button container ------------>
+      <div class="quiz_start_btn">
+        <h2>Click the button to get started</h2>
+        <button>Start</button>
+      </div>
+
+      <!------------ quiz information container ------------>
+      <div class="quiz_info_container" id="quiz_info_container">
+        <div class="quiz-info-title">
+          <h2>Take a moment to read the following rules before you start!</h2>
+        </div>
+
+        <div class="quiz_info_list">
+          <div class="quiz-info">
+            1. You will have only 30 seconds per each question.
+          </div>
+          <div class="quiz-info">
+            2. If you don’t answer within 30 seconds, you are miss one point.
+          </div>
+          <div class="quiz-info">3. Each question has one point.</div>
+          <div class="quiz-info">
+            4. You can quit the quiz at any point, but you lose your points
+          </div>
+          <div class="quiz-info">5. Quiz information container</div>
+        </div>
+        <div class="buttons" id="quiz-info-buttons">
+          <button class="exit" id="exit">Exit</button>
+          <button class="btn" id="continue_btn">continue</button>
+        </div>
+      </div>
+    </header>
+    <!-- Quiz container -->
+    <main class="quiz_page_content">
+      <section class="question_list_wrapper">
+        <header class="app_header">
+          <div class="header" id="header">
+            <h2>Quiz Application</h2>
+          </div>
+          <div class="time_left" id="time_left">
+            <p>20</p>
+          </div>
+        </header>
+
+        <ul class="question_list">
+          <li class="question_item">
+            <div class="question">
+              <!-- The questions will be dynamically inserted directly from JavaScript  -->
+            </div>
+            <div class="choice_list">
+              <!-- The options will be dynamically inserted directly from JavaScript  -->
+            </div>
+            <div class="asnwer_alert">
+              <div class="correctAnswer"></div>
+              <div class="wrongAnswer"></div>
+            </div>
+          </li>
+
+          <!--The question container footer  -->
+
+          <footer>
+            <div class="number_of_question">
+              <!-- number of questions will be dynamically inserted directly from JavaScript -->
+            </div>
+            <button class="next">Next</button>
+          </footer>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Quiz score starts -->
+    <footer class="score">
+      <div class="quiz-complite-message">
+        Congratulations, you have successfully completed the quiz!
+      </div>
+
+      <div class="score-message">
+        <span>
+          <p>and you scored</p>
+          &nbsp
+          <p>15</p></span
+        >
+      </div>
+      <div class="buttons">
+        <button class="retake">Retake Quiz</button>
+        <button class="exit">Exit Quiz</button>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/quiz.js"></script>
+  </body>
+</html>
