@@ -11,18 +11,18 @@
   <body>
     <header class="main-header">
       <!------------ quiz start button container ------------>
-      <div class="quiz-start-btn">
+      <div class="quiz_start_btn">
         <h2>Click the button to get started</h2>
         <button>Start</button>
       </div>
 
       <!------------ quiz information container ------------>
-      <div class="quiz-info-container">
+      <div class="quiz_info_container" id="quiz_info_container">
         <div class="quiz-info-title">
           <h2>Take a moment to read the following rules before you start!</h2>
         </div>
 
-        <div class="quiz-info-list">
+        <div class="quiz_info_list">
           <div class="quiz-info">
             1. You will have only 30 seconds per each question.
           </div>
@@ -36,70 +36,42 @@
           <div class="quiz-info">5. Quiz information container</div>
         </div>
         <div class="buttons" id="quiz-info-buttons">
-          <button class="btn" id="exit">Exit</button>
-          <button class="btn" id="continue">Continue</button>
+          <button class="exit" id="exit">Exit</button>
+          <button class="btn" id="continue_btn">continue</button>
         </div>
       </div>
     </header>
     <!-- Quiz container -->
-    <main class="quiz-page-content">
-      <section class="question-list-wrapper">
-        <header class="question-list-wrapper">
-          <div class="quiz-title" id="quiz-title">
-            <h2>Interactive Timed Quiz Application</h2>
+    <main class="quiz_page_content">
+      <section class="question_list_wrapper">
+        <header class="app_header">
+          <div class="header" id="header">
+            <h2>Quiz Application</h2>
           </div>
-          <div class="count-down-timer" id="count-down-timer">
-            <div class="remaining-time-text" id="remaining-time-text">
-              Time remaining
-            </div>
-            <div class="remaining-time" id="remaining-time">20</div>
+          <div class="time_left" id="time_left">
+            <p>20</p>
           </div>
         </header>
 
-        <ul class="question-list">
-          <li class="question-item">
+        <ul class="question_list">
+          <li class="question_item">
             <div class="question">
-              <p>1. What does CSS stand for?</p>
+              <!-- The questions will be dynamically inserted directly from JavaScript  -->
             </div>
-            <div class="choice-lists">
-              <div class="choice">
-                <p>A. Colorful Style Sheets</p>
-
-                <div class="wrong-answer">
-                  <p>Wrong!</p>
-                </div>
-              </div>
-
-              <div class="choice">
-                <p>B. Cascading Style Sheets</p>
-
-                <div class="correct-answer">
-                  <p>Correct!</p>
-                </div>
-              </div>
-
-              <div class="choice">
-                <p>C. Creative Style Sheets</p>
-              </div>
-
-              <div class="choice">
-                <p>D. Computer Style Sheets</p>
-              </div>
+            <div class="choice_list">
+              <!-- The options will be dynamically inserted directly from JavaScript  -->
+            </div>
+            <div class="asnwer_alert">
+              <div class="correctAnswer"></div>
+              <div class="wrongAnswer"></div>
             </div>
           </li>
 
           <!--The question container footer  -->
+
           <footer>
-            <div class="question-number-of-total">
-              <span>
-                <p>Question</p>
-                &nbsp
-                <p>1</p>
-                &nbsp
-                <p>of</p>
-                &nbsp
-                <p>5</p>
-              </span>
+            <div class="number_of_question">
+              <!-- number of questions will be dynamically inserted directly from JavaScript -->
             </div>
             <button class="next">Next</button>
           </footer>
@@ -126,6 +98,7 @@
         <button class="exit">Exit Quiz</button>
       </div>
     </footer>
-    <script src="/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/quiz.js"></script>
   </body>
 </html>
