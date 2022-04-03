@@ -44,62 +44,36 @@
     <!-- Quiz container -->
     <main class="quiz_page_content">
       <section class="question_list_wrapper">
-        <header class="question_list_wrapper_header">
-          <div class="quiz-title" id="quiz-title">
-            <h2>Interactive Timed Quiz Application</h2>
+        <header class="app_header">
+          <div class="header" id="header">
+            <h2>Quiz Application</h2>
           </div>
-          <div class="count-down-timer" id="count-down-timer">
-            <div class="remaining-time-text" id="remaining-time-text">
-              Time remaining
-            </div>
-            <div class="remaining-time" id="remaining-time">20</div>
+          <div class="time_left" id="time_left">
+            <p>20</p>
           </div>
         </header>
 
-        <ul class="question-_ist">
+        <ul class="question_list">
           <li class="question_item">
             <div class="question">
-              <!-- <p>What does CSS stand for?</p> -->
+              <!-- The questions will be dynamically inserted directly from JavaScript  -->
             </div>
-            <div class="choice_lists">
-              <!-- <div class="choice">
-                <p>A. Colorful Style Sheets</p>
-
-                <div class="wrong-answer">
-                  <p>Wrong!</p>
-                </div>
-              </div>
-
+            <div class="choice_list">
               <div class="choice">
-                <p>B. Cascading Style Sheets</p>
-
-                <div class="correct-answer">
-                  <p>Correct!</p>
-                </div>
+                <!-- The options will be dynamically inserted directly from JavaScript  -->
               </div>
-
-              <div class="choice">
-                <p>C. Creative Style Sheets</p>
-              </div>
-
-              <div class="choice">
-                <p>D. Computer Style Sheets</p>
-              </div> -->
+            </div>
+            <div class="asnwer_alert">
+              <div class="correctAnswer"></div>
+              <div class="wrongAnswer"></div>
             </div>
           </li>
 
           <!--The question container footer  -->
+
           <footer>
-            <div class="question-number-of-total">
-              <span>
-                <p>Question</p>
-                &nbsp
-                <p>1</p>
-                &nbsp
-                <p>of</p>
-                &nbsp
-                <p>5</p>
-              </span>
+            <div class="number_of_question">
+              <!-- number of questions will be dynamically inserted directly from JavaScript -->
             </div>
             <button class="next">Next</button>
           </footer>
