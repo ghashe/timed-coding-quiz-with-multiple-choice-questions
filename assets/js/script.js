@@ -71,29 +71,28 @@ function fetchQuestions(index) {
 function optionSelected(answer) {
   let userSelectedAnswer = answer.textContent;
   let rightAnswer = questions[numberOfQuestion].answer;
+  let allChoices = choiceList.children.length;
+
   if (userSelectedAnswer == rightAnswer) {
     answer.classList.add("correct");
     console.log("correct");
   } else {
     answer.classList.add("wrong");
+
+    // If the wrong answer is selected, select the correct one and display it to the user
+    for (let i = 0; i < allChoices; i++) {
+      if (choiceList.children[i].textContent == rightAnswer) {
+        choiceList.children[i].setAttribute("class", "choice correct");
+      }
+    }
   }
-  let allChoices = choiceList.children.length;
+
+  // One chance is given to the user to choose the answer; once the answer is selected, options are disabled
+
+  for (let i = 0; i < allChoices; i++) {
+    choiceList.children[i].classList.add("disabled");
+  }
 }
-
-// One chance is given to the user to choose the answer; once the answer is selected, options are disabled
-
-//   if (userSelectedAnswer == rightAnswer) {
-//     answer.classList.add("correctAnswer");
-//     console.log("Correct!");
-//   } else answer.classList.add("wrongAnswer");
-//   console.log("Wrong!");
-
-//   // If the wrong answer is selected, select the correct one and display it to the user
-//   for (let i = 0; i < allChoices; i++) {
-//     if (choiceList.children[i].textContent == rightAnswer)
-//       choiceList.children[i].setAttribute("class", "Option Correct");
-//   }
-// }
 
 var next = quiz_container.querySelector(".next");
 next.onclick = function () {
@@ -104,27 +103,3 @@ next.onclick = function () {
 //  Add a div that inserts the results of the selected option (Correct! or Wrong!)
 let correctAlert = '<div class="correct_asnwer"><p>Correct!</p></div>';
 let wrongAlert = '<div class="correct_asnwer"><p>Wrong!</p></div>';
-
-//   // for (let i = 0; i < allChoices; i++) {
-//   //   if (userSelectedAnswer === rightAnswer) {
-//   //     answer_message.innerHTML = correctAlert;
-//   //   } else answer.classList.add("wrongAnswer");
-//   //   answer_message.innerHTML = wrongAlert;
-//   // }
-
-//   // The user has one chance to select the answer once he selected the answer disable the options
-//   for (let i = 0; i < allChoices; i++) {
-//     choiceList.children[i].classList.add("disabled");
-//   }
-
-// Adding functionality to next button
-// function queCounter(index) {
-//   //creating a new span tag and passing the question number and total question
-//   let totalQueCounTag =
-//     "<span><p>" +
-//     index +
-//     "</p> of <p>" +
-//     questions.length +
-//     "</p> Questions</span>";
-//   bottom_ques_counter.innerHTML = totalQueCounTag; //adding new span tag inside bottom_ques_counter
-// }
